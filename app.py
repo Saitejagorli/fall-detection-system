@@ -12,7 +12,7 @@ import os
 def main():
     st.title("Fall Detection System")
     
-    dataset_path = st.text_input("Enter dataset path:", r"code\fall_dataset")
+    dataset_path = st.text_input("Enter dataset path:", r"./code/fall_dataset")
 
     # Ensure session state variables are initialized
     if "train_generator" not in st.session_state:
@@ -77,7 +77,7 @@ def main():
             history = model.fit(
                 st.session_state.train_generator,
                 validation_data=st.session_state.val_generator,
-                epochs=8,
+                epochs=10,
                 verbose=1
             )
             st.success("Model Training Completed!")
