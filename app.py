@@ -77,7 +77,7 @@ def main():
             history = model.fit(
                 st.session_state.train_generator,
                 validation_data=st.session_state.val_generator,
-                epochs=9,
+                epochs=8,
                 verbose=1
             )
             st.success("Model Training Completed!")
